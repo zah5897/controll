@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>dialogDemo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<h1>dialog 测试</h1>
+<button id="fileDialog" onclick="getPath()"/>
+<script>
+    var fs = require("fs");
+    function getPath() {
+        var files = document.getElementById('fileDialog')[0].files;
+        for (var i = 0; i < files.length; ++i) {
+            console.log(files[i].path);
+            alert(files[i].path);
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.didispace:spring-boot-starter-swagger:1.4.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.didispace/spring-boot-starter-swagger/1.4.1.RELEASE/6eaf881d01b9c074ec4bcf29907b3f8ea9d2e20a/spring-boot-starter-swagger-1.4.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.didispace/spring-boot-starter-swagger/1.4.1.RELEASE/b9c6dcf76b08704280d382cb0e0044778d6e342f/spring-boot-starter-swagger-1.4.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

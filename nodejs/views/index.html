@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>电玩宝打包系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
+    <style type="text/css">
+
+       *{
+           font-size: small;
+       }
+
+       fieldset {
+           border: 1px solid lightgray;
+           border-radius: 5px;
+           font-size: 20px;
+       }
+       select{
+           border: 1px solid lightgray;
+           border-radius: 5px;
+       }
+       input{
+           border: 1px solid lightgray;
+           border-radius: 5px;
+       }
+
+        .input{
+            padding: 2px;
+        }
+    </style>
+
+</head>
+<script type="text/javascript">
+    function selectFile(fileInput) {
+        alert(fileInput.value);
+    }
+</script>
+
+<body>
+
+<form>
+
+    <!--SDK主要属性-->
+    <fieldset>
+        <legend>游戏包配置信息</legend>
+        <table>
+            <tr>
+                <td>游戏APK文件：</td>
+                <td><input id="fileId1" type="file" accept="application/vnd.android.package-archive" name="file"
+                           onchange="selectFile(this)"/></td>
+                <!--<td><input type="file" onchange="selectFile(this)"/></td>-->
+            </tr>
+            <tr>
+                <td>appKey：</td>
+                <td><input class="input" type="text"/></td>
+            </tr>
+            <tr>
+                <td>appSecret：</td>
+                <td><input  class="input" type="text"/></td>
+            </tr>
+
+            <tr>
+                <td>游戏包SDK版本：</td>
+                <td id="game_sdk_version"></td>
+            </tr>
+
+            <tr>
+                <td>升级SDK版本：</td>
+                <td id="update_sdk_version"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <!--额外属性配置-->
+    <fieldset>
+        <legend>游戏打包操作属性</legend>
+        <table>
+            <tr>
+                <td>强制退出游戏：</td>
+                <td>
+                    <select>
+                        <option>忽略</option>
+                        <option>双击BACK键强退</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>是否支持遥控器操作：</td>
+                <td><input  type="checkbox" value="是"/></td>
+            </tr>
+            <tr>
+                <td>打包完毕是否上传：</td>
+                <td><input  type="checkbox"/></td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+    <!--渠道信息-->
+    <fieldset>
+        <legend>渠道配置</legend>
+
+
+        <table>
+            <tr>
+                <td>
+                    <select id="sys_all_channels" size="7" style="width: 150px">
+                        <option>通用</option>
+                        <option>电玩宝TV</option>
+                    </select>
+                </td>
+                <td>
+                <span>
+                  <button>添加&gt;&gt;</button>
+                    <br/>
+                    <br/>
+                  <button>取消&lt;&lt;</button>
+                </span>
+                </td>
+                <td>
+                    <select id="select_to_repackage_channels" size="7" style="width: 150px">
+                        <option>电玩宝TV</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br/>
+    <div style="width: 100%;text-align: center">
+        <button style="height: 40px;width: 120px">开始打包</button>
+    </div>
+</form>
+</body>
+</html>
